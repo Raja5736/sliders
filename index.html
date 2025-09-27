@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sliders</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <section>
-        <img src="1.jpeg" class="myslide">
-    <img src="3.jpeg" class="myslide">
-    <p id="debug"></p>
-</section>
+
+<body style="background-color: black;">
+    <section class="image">
+        <center>
+            <img src="1.jpeg" class="myslides">
+            <img src="3.jpeg" class="myslides">
+        </center>
+   
+    </section>
+
+    <section class="about">
+        <p>This image is about wild animals</p>
+        </section>
+
     
 
+    <script src="script.js">
 
-    <script>
-        carousel();
-
-        function carousel(){
-            var myindex=0;
-            document.getElementById("debug").innerHTML=myindex;
-            var x=document.getElementsByClassName("myslide");
-            var i;
-            for(i=0; i<x.length;i++){
-                x[i].style.display="none";
-            }
-            
-            x[myindex].style.display = "block";
-            myindex++;
-            if(myindex>x.length){
-
-                myindex=0;
-                clearTimeout(myTimeout)
-            }
-            
-            myTimeout=setTimeout(carousel,3000);
-            
-            
-            
-        }
     </script>
-</body>
+
+    </body>
+
 </html>
